@@ -1,4 +1,6 @@
 var i = 0;
+var j = 0;
+var subArray = [];
 
 function createArray(number){
   var multiDimArray = [];
@@ -13,4 +15,23 @@ function createArray(number){
 
 var multiDimArrayOf6 = createArray(6);
 
-console.log(multiDimArrayOf6);
+// console.log(multiDimArrayOf6);
+
+function augmentArray(array){
+  for(i = 0; i < array.length; i++){
+    
+    subArray = array[i];
+
+    for(j = 0; j < subArray.length; j++){
+      subArray[j]+=1;
+      subArray[j]*=2;
+    }
+
+    console.log(subArray);
+  }
+  return array;
+}
+
+multiDimArrayOf6 = augmentArray(multiDimArrayOf6);
+
+// console.log(multiDimArrayOf6);
