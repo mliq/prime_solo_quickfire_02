@@ -17,14 +17,26 @@ var multiDimArrayOf6 = createArray(6);
 
 // console.log(multiDimArrayOf6);
 
+function add1(x){
+  x+=1;
+  return x;
+}
+
+function times2(x){
+  x*=2;
+  return x;
+}
+
 function augmentArray(array){
   for(i = 0; i < array.length; i++){
     
     subArray = array[i];
 
     for(j = 0; j < subArray.length; j++){
-      subArray[j]+=1;
-      subArray[j]*=2;
+      // subArray[j]+=1;
+      // subArray[j]*=2;
+      subArray[j] = add1(subArray[j]);
+      subArray[j] = times2(subArray[j]);
     }
 
     console.log(subArray);
